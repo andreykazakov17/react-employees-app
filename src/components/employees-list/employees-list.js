@@ -7,7 +7,7 @@ const EmployeesList = ({data}) => {
     const elements = data.map(item => {
         return (
             // Передать пропсы в компонент можно также при помощи spread-оператора - {...item}
-            <EmployeesListItem key={item.id} name={item.name} salary={item.salary} increase={item.increase} />
+            <EmployeesListItem {...item}/>
         );
     });
 
